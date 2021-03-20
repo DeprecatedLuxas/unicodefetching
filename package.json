@@ -1,0 +1,27 @@
+{
+  "name": "unicodefetching",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeprecatedLuxas/unicodefetching.git"
+  },
+  "keywords": [],
+  "author": "Lucas Norgaard <lucasnrgaard@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DeprecatedLuxas/unicodefetching/issues"
+  },
+  "homepage": "https://github.com/DeprecatedLuxas/unicodefetching#readme",
+  "dependencies": {
+    "@octokit/core": "3.3.1",
+    "@octokit/request": "5.4.14",
+    "axios": "0.21.1",
+    "dotenv": "8.2.0",
+    "moment": "2.29.1"
+  }
+}
