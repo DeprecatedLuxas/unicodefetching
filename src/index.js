@@ -69,7 +69,7 @@ async function getLatestSha() {
 async function updateLatestFile(fileObj) {
     const sha = await getLatestSha();
     try {
-        const result = await request("PUT /repos/{owner}/{repo}/contents/{path}", {
+        return await request("PUT /repos/{owner}/{repo}/contents/{path}", {
             headers: {
                 authorization: `token ${process.env.GITHUB_TOKEN}`,
               },
@@ -80,7 +80,6 @@ async function updateLatestFile(fileObj) {
               message: "Updated latest.json with the new values.",
               content: Buffer.from(JSON.stringify(fileObj, null, 4)).toString('base64')   
         });
-        console.log(result)
     } catch (exception) {
         console.error(exception)
     }
